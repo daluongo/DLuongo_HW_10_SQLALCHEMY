@@ -6,47 +6,24 @@
 
 I used Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
-
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
-
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
-
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
 ### Precipitation Analysis
 
-* Design a query to retrieve the last 12 months of precipitation data.
+* I designed a query to retrieve the last 12 months of precipitation data, selecting only the `date` and `prcp` values.
 
-* Select only the `date` and `prcp` values.
+* The query results were loaded into a Pandas DataFrame and the index was set to the date column.
 
-* Load the query results into a Pandas DataFrame and set the index to the date column.
+* The DataFrame values were sorted by `date`.
 
-* Sort the DataFrame values by `date`.
-
-* Plot the results using the DataFrame `plot` method.
+* The results were plotted using the DataFrame `plot` method.
 
   ![precipitation](Images/precipitation.png)
 
-* Use Pandas to print the summary statistics for the precipitation data.
-
 ### Station Analysis
 
-* Design a query to calculate the total number of stations.
+* I designed queries calculating the total number of stations, the most active stations(most observations), and retrieving the last 12 months of temperature observation data.
 
-* Design a query to find the most active stations.
-
-  * List the stations and observation counts in descending order.
-
-  * Which station has the highest number of observations?
-
-  * Hint: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
-
-* Design a query to retrieve the last 12 months of temperature observation data (tobs).
-
-  * Filter by the station with the highest number of observations.
-
-  * Plot the results as a histogram with `bins=12`.
+* The results were plotted as a histogram.
 
     ![station-histogram](Images/station-histogram.png)
 
